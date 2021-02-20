@@ -1,6 +1,6 @@
 {
   "name": "zettabit_frontend",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -9,12 +9,16 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "primeicons": "^4.1.0",
+    "primevue": "^3.2.4",
     "register-service-worker": "^1.7.1",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {
+    "@babel/polyfill": "^7.11.5",
+    "@tailwindcss/postcss7-compat": "^2.0.3",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -27,11 +31,16 @@
     "@vue/compiler-sfc": "^3.0.0",
     "@vue/eslint-config-airbnb": "^5.0.2",
     "@vue/eslint-config-typescript": "^5.0.2",
+    "autoprefixer": "^9.8.6",
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-vue": "^7.0.0-0",
-    "sass": "^1.26.5",
-    "sass-loader": "^8.0.2",
+    "mutationobserver-shim": "^0.3.7",
+    "portal-vue": "^2.1.7",
+    "postcss": "^7.0.35",
+    "sass": "^1.26.11",
+    "sass-loader": "^10.0.2",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3",
     "typescript": "~3.9.3"
   },
   "eslintConfig": {
@@ -47,7 +56,14 @@
     "parserOptions": {
       "ecmaVersion": 2020
     },
-    "rules": {}
+    "rules": {
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": true
+        }
+      ]
+    }
   },
   "browserslist": [
     "> 1%",

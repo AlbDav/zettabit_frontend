@@ -1,8 +1,8 @@
 import '@babel/polyfill';
 import 'mutationobserver-shim';
-import 'soft-ui-library/dist/css/neumorphism-ui.css';
 import { createApp } from 'vue';
 import App from './App.vue';
+import './index.css';
 import './registerServiceWorker';
 import router from './router';
 import store from './store';

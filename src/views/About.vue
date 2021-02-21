@@ -4,3 +4,14 @@
     <input type="text" class="sul-text-field" placeholder="Text">
   </div>
 </template>
+
+<script>
+import ArticleRender from '../components/Article/ArticleRender,vue';
+import ArticleNode from '../components/Article/ArticleNode.vue';
+
+export default {
+  data() {
+    return {}
+  }
+}
+</script>

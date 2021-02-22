@@ -18,8 +18,8 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/article',
     name: 'Article',
-    component: () => import('../views/Article.vue');
-  }
+    component: () => import('../views/Article.vue'),
+  },
 ];
 
 const router = createRouter({

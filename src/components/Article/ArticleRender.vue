@@ -4,21 +4,27 @@
             <article-render v-for="(subNode, i) in node.content" :key="i" :node="subNode">
             </article-render>
         </template>
-        <template v-else>
+        <template v-else-if="node.text">
             {{ node.text }}
         </template>
     </article-node>
 </template>
 
 <script>
-import ArticleNode from '../components/Article/ArticleNode.vue';
 import ArticleNode from './ArticleNode.vue';
 
 export default {
-    name: 'article-render',
-    props: ['node'],
-    components: {
-        ArticleNode
-    }
-}
+	name: 'article-render',
+	props: ['node'],
+	components: {
+		ArticleNode,
+	},
+	created() {
+		if (this.node.content) {
+			console.log(this.node.content);
+		} else {
+			console.log(this.node.text);
+		}
+	},
+};
 </script>

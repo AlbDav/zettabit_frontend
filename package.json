@@ -62,7 +62,12 @@
         {
           "devDependencies": true
         }
-      ]
+      ],
+      "indent": [
+        "error",
+        "tab"
+      ],
+      "no-tabs": 0
     }
   },
   "browserslist": [

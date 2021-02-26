@@ -1,21 +1,23 @@
 <template>
-	<div id="editor"></div>
+	<div id="editor">
+	</div>
 </template>
 
 <script>
-import { schema } from "prosemirror-schema-basic";
-import { EditorState } from "prosemirror-state";
-import { EditorView } from "prosemirror-view";
+import { schema } from 'prosemirror-schema-basic';
+import { EditorState } from 'prosemirror-state';
+import { EditorView } from 'prosemirror-view';
 
 export default {
 	mounted() {
 		this.initializeEditor();
+		console.log('ciao');
 	},
 	methods: {
-		inizializeEditor() {
-			let state = EditorState.create({ schema });
-			let view = new EditorView(document.querySelector('#editor'), { state });
-		}
-	}
-}
+		initializeEditor() {
+			const state = EditorState.create({ schema });
+			const view = new EditorView(document.querySelector('#editor'), { state });
+		},
+	},
+};
 </script>

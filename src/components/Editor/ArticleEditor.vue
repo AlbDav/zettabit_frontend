@@ -3,9 +3,9 @@
 </template>
 
 <script>
-import { schema } from "prosemirror-schema-basic";
-import { EditorState } from "prosemirror-state";
-import { EditorView } from "prosemirror-view";
+import { schema } from 'prosemirror-schema-basic';
+import { EditorState } from 'prosemirror-state';
+import { EditorView } from 'prosemirror-view';
 
 export default {
 	mounted() {
@@ -13,9 +13,9 @@ export default {
 	},
 	methods: {
 		inizializeEditor() {
-			let state = EditorState.create({ schema });
-			let view = new EditorView(document.querySelector('#editor'), { state });
-		}
-	}
-}
+			const state = EditorState.create({ schema });
+			const view = new EditorView(document.querySelector('#editor'), { state });
+		},
+	},
+};
 </script>
